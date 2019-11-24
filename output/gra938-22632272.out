@@ -1,0 +1,402 @@
+Using base prefix '/cvmfs/soft.computecanada.ca/easybuild/software/2017/Core/python/3.6.3'
+New python executable in /localscratch/shiva23.22632272.0/env/bin/python
+Installing setuptools, pip, wheel...done.
+Ignoring pip: markers 'python_version < "3"' don't match your environment
+Collecting torch
+Collecting torchvision
+Collecting numpy (from torch)
+Collecting pillow>=4.1.1 (from torchvision)
+Collecting six (from torchvision)
+Installing collected packages: numpy, torch, pillow, six, torchvision
+Successfully installed numpy-1.17.4 pillow-6.2.1 six-1.13.0 torch-1.3.1 torchvision-0.4.0
+building network of steps: 
+[1, 2, 3, 4, 5] 15
+ ********************** Block 1  **********************
+|		inScales 3 outScales 3 inChannels 16 outChannels 6		|
+
+ ********************** Block 2  **********************
+|		inScales 3 outScales 3 inChannels 22 outChannels 6		|
+
+|		inScales 3 outScales 3 inChannels 28 outChannels 6		|
+
+ ********************** Block 3  **********************
+|		inScales 3 outScales 3 inChannels 34 outChannels 6		|
+
+|		inScales 3 outScales 3 inChannels 40 outChannels 6		|
+
+|		inScales 3 outScales 2 inChannels 46 outChannels 6		|
+|		Transition layer inserted! (max), inChannels 52, outChannels 26	|
+
+ ********************** Block 4  **********************
+|		inScales 2 outScales 2 inChannels 26 outChannels 6		|
+
+|		inScales 2 outScales 2 inChannels 32 outChannels 6		|
+
+|		inScales 2 outScales 2 inChannels 38 outChannels 6		|
+
+|		inScales 2 outScales 2 inChannels 44 outChannels 6		|
+
+ ********************** Block 5  **********************
+|		inScales 2 outScales 1 inChannels 50 outChannels 6		|
+|		Transition layer inserted! (max), inChannels 56, outChannels 28	|
+
+|		inScales 1 outScales 1 inChannels 28 outChannels 6		|
+
+|		inScales 1 outScales 1 inChannels 34 outChannels 6		|
+
+|		inScales 1 outScales 1 inChannels 40 outChannels 6		|
+
+|		inScales 1 outScales 1 inChannels 46 outChannels 6		|
+
+---------------------
+FLOPs: 6.85M, Params: 0.29M
+---------------------
+FLOPs: 14.33M, Params: 0.63M
+---------------------
+FLOPs: 27.50M, Params: 0.98M
+---------------------
+FLOPs: 41.67M, Params: 1.45M
+---------------------
+FLOPs: 58.42M, Params: 2.02M
+building network of steps: 
+[1, 2, 3, 4, 5] 15
+ ********************** Block 1  **********************
+|		inScales 3 outScales 3 inChannels 16 outChannels 6		|
+
+ ********************** Block 2  **********************
+|		inScales 3 outScales 3 inChannels 22 outChannels 6		|
+
+|		inScales 3 outScales 3 inChannels 28 outChannels 6		|
+
+ ********************** Block 3  **********************
+|		inScales 3 outScales 3 inChannels 34 outChannels 6		|
+
+|		inScales 3 outScales 3 inChannels 40 outChannels 6		|
+
+|		inScales 3 outScales 2 inChannels 46 outChannels 6		|
+|		Transition layer inserted! (max), inChannels 52, outChannels 26	|
+
+ ********************** Block 4  **********************
+|		inScales 2 outScales 2 inChannels 26 outChannels 6		|
+
+|		inScales 2 outScales 2 inChannels 32 outChannels 6		|
+
+|		inScales 2 outScales 2 inChannels 38 outChannels 6		|
+
+|		inScales 2 outScales 2 inChannels 44 outChannels 6		|
+
+ ********************** Block 5  **********************
+|		inScales 2 outScales 1 inChannels 50 outChannels 6		|
+|		Transition layer inserted! (max), inChannels 56, outChannels 28	|
+
+|		inScales 1 outScales 1 inChannels 28 outChannels 6		|
+
+|		inScales 1 outScales 1 inChannels 34 outChannels 6		|
+
+|		inScales 1 outScales 1 inChannels 40 outChannels 6		|
+
+|		inScales 1 outScales 1 inChannels 46 outChannels 6		|
+
+Files already downloaded and verified
+Files already downloaded and verified
+!!!!!! Load train_set_index !!!!!!
+ * prec@1 45.680 prec@5 93.020
+ * prec@1 49.920 prec@5 92.540
+ * prec@1 52.160 prec@5 94.460
+ * prec@1 52.600 prec@5 94.980
+ * prec@1 53.080 prec@5 94.780
+[45.67999995727539, 49.920000024414065, 52.16, 52.600000006103514, 53.08000001831055]
+Best var_prec1 53.08000001831055
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_000.pth.tar'
+=> saved checkpoint './save_models/checkpoint_000.pth.tar'
+Epoch : 0  of  25 
+
+ * prec@1 53.100 prec@5 94.920
+ * prec@1 60.860 prec@5 96.080
+ * prec@1 61.140 prec@5 96.420
+ * prec@1 62.200 prec@5 96.860
+ * prec@1 59.820 prec@5 96.560
+[53.099999957275394, 60.86, 61.140000036621096, 62.20000003662109, 59.820000024414064]
+Best var_prec1 59.820000024414064
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_001.pth.tar'
+=> saved checkpoint './save_models/checkpoint_001.pth.tar'
+Epoch : 1  of  25 
+
+ * prec@1 59.620 prec@5 95.000
+ * prec@1 63.360 prec@5 96.740
+ * prec@1 65.860 prec@5 97.220
+ * prec@1 65.680 prec@5 97.260
+ * prec@1 63.460 prec@5 96.760
+[59.62000001220703, 63.35999999389649, 65.86000001220702, 65.68000001220703, 63.45999995727539]
+Best var_prec1 63.45999995727539
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_002.pth.tar'
+=> saved checkpoint './save_models/checkpoint_002.pth.tar'
+Epoch : 2  of  25 
+
+ * prec@1 65.360 prec@5 97.420
+ * prec@1 69.460 prec@5 97.940
+ * prec@1 73.720 prec@5 98.200
+ * prec@1 73.840 prec@5 98.040
+ * prec@1 73.880 prec@5 97.840
+[65.35999991455078, 69.45999995117188, 73.71999986572266, 73.83999987792969, 73.87999987792969]
+Best var_prec1 73.87999987792969
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_003.pth.tar'
+=> saved checkpoint './save_models/checkpoint_003.pth.tar'
+Epoch : 3  of  25 
+
+ * prec@1 66.580 prec@5 97.520
+ * prec@1 70.260 prec@5 98.100
+ * prec@1 74.960 prec@5 98.680
+ * prec@1 74.820 prec@5 98.660
+ * prec@1 74.820 prec@5 98.340
+[66.58000001220704, 70.25999992675781, 74.96000006103516, 74.81999993896484, 74.81999992675782]
+Best var_prec1 74.81999992675782
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_004.pth.tar'
+=> saved checkpoint './save_models/checkpoint_004.pth.tar'
+Epoch : 4  of  25 
+
+ * prec@1 68.260 prec@5 97.840
+ * prec@1 73.280 prec@5 98.240
+ * prec@1 74.080 prec@5 98.460
+ * prec@1 75.640 prec@5 98.760
+ * prec@1 76.420 prec@5 98.580
+[68.26000004882812, 73.27999998779296, 74.08000002441406, 75.63999998779298, 76.41999991455079]
+Best var_prec1 76.41999991455079
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_005.pth.tar'
+=> saved checkpoint './save_models/checkpoint_005.pth.tar'
+Epoch : 5  of  25 
+
+ * prec@1 68.580 prec@5 97.560
+ * prec@1 74.580 prec@5 97.900
+ * prec@1 77.600 prec@5 98.540
+ * prec@1 78.120 prec@5 98.540
+ * prec@1 77.240 prec@5 98.440
+[68.57999997558593, 74.57999995117187, 77.59999987792969, 78.11999987792969, 77.23999987792969]
+Best var_prec1 77.23999987792969
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_006.pth.tar'
+=> saved checkpoint './save_models/checkpoint_006.pth.tar'
+Epoch : 6  of  25 
+
+ * prec@1 71.920 prec@5 98.080
+ * prec@1 76.500 prec@5 98.660
+ * prec@1 77.600 prec@5 98.680
+ * prec@1 78.040 prec@5 98.820
+ * prec@1 77.160 prec@5 98.720
+[71.92000001220703, 76.49999993896485, 77.59999992675782, 78.03999995117188, 77.1600000366211]
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_007.pth.tar'
+=> saved checkpoint './save_models/checkpoint_007.pth.tar'
+Epoch : 7  of  25 
+
+ * prec@1 72.760 prec@5 98.020
+ * prec@1 74.880 prec@5 98.500
+ * prec@1 77.040 prec@5 98.420
+ * prec@1 77.940 prec@5 98.780
+ * prec@1 78.400 prec@5 98.760
+[72.75999992675781, 74.87999993896484, 77.04000006103516, 77.93999990234374, 78.39999989013671]
+Best var_prec1 78.39999989013671
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_008.pth.tar'
+=> saved checkpoint './save_models/checkpoint_008.pth.tar'
+Epoch : 8  of  25 
+
+ * prec@1 72.360 prec@5 98.240
+ * prec@1 74.920 prec@5 98.540
+ * prec@1 78.620 prec@5 98.800
+ * prec@1 78.920 prec@5 99.120
+ * prec@1 79.360 prec@5 99.100
+[72.35999991455078, 74.92000002441407, 78.61999987792969, 78.92000003662109, 79.36000004882813]
+Best var_prec1 79.36000004882813
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_009.pth.tar'
+=> saved checkpoint './save_models/checkpoint_009.pth.tar'
+Epoch : 9  of  25 
+
+ * prec@1 74.120 prec@5 98.220
+ * prec@1 77.800 prec@5 98.920
+ * prec@1 80.100 prec@5 99.120
+ * prec@1 80.860 prec@5 98.960
+ * prec@1 81.460 prec@5 99.020
+[74.11999995117188, 77.79999996337891, 80.10000001220703, 80.86000003662109, 81.46000004882812]
+Best var_prec1 81.46000004882812
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_010.pth.tar'
+=> saved checkpoint './save_models/checkpoint_010.pth.tar'
+Epoch : 10  of  25 
+
+ * prec@1 76.240 prec@5 98.580
+ * prec@1 78.980 prec@5 98.820
+ * prec@1 79.920 prec@5 99.060
+ * prec@1 81.440 prec@5 99.160
+ * prec@1 81.080 prec@5 99.160
+[76.23999997558593, 78.98, 79.91999991455079, 81.43999995117187, 81.08000004882813]
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_011.pth.tar'
+=> saved checkpoint './save_models/checkpoint_011.pth.tar'
+Epoch : 11  of  25 
+
+ * prec@1 75.340 prec@5 98.360
+ * prec@1 79.200 prec@5 98.820
+ * prec@1 81.300 prec@5 99.040
+ * prec@1 82.020 prec@5 99.060
+ * prec@1 80.620 prec@5 98.980
+[75.33999995117188, 79.1999999633789, 81.29999995117187, 82.01999986572265, 80.61999993896484]
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_012.pth.tar'
+=> saved checkpoint './save_models/checkpoint_012.pth.tar'
+Epoch : 12  of  25 
+
+ * prec@1 79.620 prec@5 98.840
+ * prec@1 82.220 prec@5 99.300
+ * prec@1 85.420 prec@5 99.440
+ * prec@1 86.680 prec@5 99.500
+ * prec@1 86.680 prec@5 99.520
+[79.62000004882813, 82.21999989013672, 85.42000002441407, 86.67999990234375, 86.68000001220703]
+Best var_prec1 86.68000001220703
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_013.pth.tar'
+=> saved checkpoint './save_models/checkpoint_013.pth.tar'
+Epoch : 13  of  25 
+
+ * prec@1 79.440 prec@5 98.780
+ * prec@1 82.520 prec@5 99.300
+ * prec@1 85.520 prec@5 99.420
+ * prec@1 86.360 prec@5 99.520
+ * prec@1 86.860 prec@5 99.460
+[79.43999997558593, 82.51999997558593, 85.51999987792969, 86.35999989013672, 86.86]
+Best var_prec1 86.86
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_014.pth.tar'
+=> saved checkpoint './save_models/checkpoint_014.pth.tar'
+Epoch : 14  of  25 
+
+ * prec@1 80.300 prec@5 98.980
+ * prec@1 83.060 prec@5 99.240
+ * prec@1 86.140 prec@5 99.340
+ * prec@1 87.360 prec@5 99.440
+ * prec@1 87.680 prec@5 99.540
+[80.30000001220704, 83.06000004882813, 86.13999997558594, 87.35999989013672, 87.68]
+Best var_prec1 87.68
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_015.pth.tar'
+=> saved checkpoint './save_models/checkpoint_015.pth.tar'
+Epoch : 15  of  25 
+
+ * prec@1 80.360 prec@5 99.060
+ * prec@1 83.320 prec@5 99.300
+ * prec@1 85.920 prec@5 99.440
+ * prec@1 87.540 prec@5 99.560
+ * prec@1 87.640 prec@5 99.560
+[80.36000003662109, 83.31999997558594, 85.91999986572266, 87.53999990234375, 87.63999992675781]
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_016.pth.tar'
+=> saved checkpoint './save_models/checkpoint_016.pth.tar'
+Epoch : 16  of  25 
+
+ * prec@1 80.200 prec@5 99.040
+ * prec@1 83.140 prec@5 99.280
+ * prec@1 85.940 prec@5 99.340
+ * prec@1 87.480 prec@5 99.520
+ * prec@1 87.660 prec@5 99.580
+[80.19999993896485, 83.13999986572266, 85.94000004882813, 87.47999986572266, 87.65999989013672]
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_017.pth.tar'
+=> saved checkpoint './save_models/checkpoint_017.pth.tar'
+Epoch : 17  of  25 
+
+ * prec@1 80.000 prec@5 99.200
+ * prec@1 83.200 prec@5 99.380
+ * prec@1 86.520 prec@5 99.440
+ * prec@1 87.540 prec@5 99.580
+ * prec@1 88.040 prec@5 99.600
+[80.00000004882813, 83.1999999633789, 86.51999995117187, 87.53999998779297, 88.0399999633789]
+Best var_prec1 88.0399999633789
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_018.pth.tar'
+=> saved checkpoint './save_models/checkpoint_018.pth.tar'
+Epoch : 18  of  25 
+
+ * prec@1 80.080 prec@5 99.000
+ * prec@1 84.140 prec@5 99.400
+ * prec@1 86.440 prec@5 99.460
+ * prec@1 87.740 prec@5 99.580
+ * prec@1 88.260 prec@5 99.580
+[80.07999989013672, 84.14000004882813, 86.43999996337891, 87.73999987792969, 88.26000001220703]
+Best var_prec1 88.26000001220703
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_019.pth.tar'
+=> saved checkpoint './save_models/checkpoint_019.pth.tar'
+Epoch : 19  of  25 
+
+ * prec@1 80.420 prec@5 98.980
+ * prec@1 83.200 prec@5 99.160
+ * prec@1 86.060 prec@5 99.460
+ * prec@1 87.000 prec@5 99.560
+ * prec@1 88.360 prec@5 99.600
+[80.42000002441407, 83.19999986572266, 86.06, 86.99999989013672, 88.35999991455078]
+Best var_prec1 88.35999991455078
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_020.pth.tar'
+=> saved checkpoint './save_models/checkpoint_020.pth.tar'
+Epoch : 20  of  25 
+
+ * prec@1 80.280 prec@5 99.080
+ * prec@1 83.500 prec@5 99.500
+ * prec@1 86.120 prec@5 99.500
+ * prec@1 87.660 prec@5 99.640
+ * prec@1 87.920 prec@5 99.640
+[80.28, 83.49999995117187, 86.11999997558594, 87.65999998779297, 87.91999998779296]
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_021.pth.tar'
+=> saved checkpoint './save_models/checkpoint_021.pth.tar'
+Epoch : 21  of  25 
+
+ * prec@1 79.980 prec@5 99.020
+ * prec@1 83.320 prec@5 99.420
+ * prec@1 86.260 prec@5 99.560
+ * prec@1 87.620 prec@5 99.640
+ * prec@1 88.080 prec@5 99.600
+[79.9799999633789, 83.32, 86.25999998779297, 87.61999990234375, 88.07999991455078]
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_022.pth.tar'
+=> saved checkpoint './save_models/checkpoint_022.pth.tar'
+Epoch : 22  of  25 
+
+ * prec@1 80.260 prec@5 98.820
+ * prec@1 83.540 prec@5 99.360
+ * prec@1 86.520 prec@5 99.620
+ * prec@1 88.240 prec@5 99.520
+ * prec@1 88.420 prec@5 99.660
+[80.25999986572266, 83.53999987792969, 86.51999992675782, 88.23999993896484, 88.41999992675781]
+Best var_prec1 88.41999992675781
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_023.pth.tar'
+=> saved checkpoint './save_models/checkpoint_023.pth.tar'
+Epoch : 23  of  25 
+
+ * prec@1 80.640 prec@5 98.920
+ * prec@1 83.300 prec@5 99.340
+ * prec@1 86.460 prec@5 99.400
+ * prec@1 87.880 prec@5 99.540
+ * prec@1 88.140 prec@5 99.580
+[80.63999997558594, 83.29999998779297, 86.45999991455078, 87.88, 88.14000001220703]
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_024.pth.tar'
+=> saved checkpoint './save_models/checkpoint_024.pth.tar'
+Epoch : 24  of  25 
+
+Best val_prec1: 88.4200 at epoch 23
+********** Final prediction results **********
+ * prec@1 81.820 prec@5 99.210
+ * prec@1 84.930 prec@5 99.300
+ * prec@1 87.040 prec@5 99.460
+ * prec@1 88.290 prec@5 99.610
+ * prec@1 88.680 prec@5 99.570
+[81.82, 84.93, 87.04, 88.29, 88.68]
