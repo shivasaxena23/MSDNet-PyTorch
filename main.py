@@ -15,6 +15,9 @@ from args import arg_parser
 from adaptive_inference import dynamic_evaluate
 import models
 from op_counter import measure_model
+import torch
+
+sm = torch.nn.Softmax(dim=1)
 
 args = arg_parser.parse_args()
 
@@ -180,8 +183,11 @@ def train(train_loader, model, criterion, optimizer, epoch):
 
         losses.update(loss.item(), input.size(0))
 
+        for exit in range(len(output)):
+            output[exit] = sm(output[exit])
+
         for j in range(len(output)):
-            prec1, prec5 = accuracy(output[j].data, target, topk=(1, 5))
+            prec1, prec5, conf_1_c, conf_1_w, conf_1_correct_count = accuracy(output[j].data, target, topk=(1, 5))
             top1[j].update(prec1.item(), input.size(0))
             top5[j].update(prec5.item(), input.size(0))
 
@@ -212,6 +218,11 @@ def validate(val_loader, model, criterion):
     losses = AverageMeter()
     data_time = AverageMeter()
     top1, top5 = [], []
+    conf_1_c_sum = [0.0] * 5
+    conf_1_w_sum = [0.0] * 5
+    conf_1_c_count = [0] * 5
+    conf_1_w_count = [0] * 5
+
     for i in range(args.nBlocks):
         top1.append(AverageMeter())
         top5.append(AverageMeter())
@@ -239,11 +250,18 @@ def validate(val_loader, model, criterion):
 
             losses.update(loss.item(), input.size(0))
 
+            for exit in range(len(output)):
+                output[exit] = sm(output[exit]) 
+
+
             for j in range(len(output)):
-                prec1, prec5 = accuracy(output[j].data, target, topk=(1, 5))
+                prec1, prec5, conf_1_c, conf_1_w, conf_1_correct_count = accuracy(output[j].data, target, topk=(1, 5))
                 top1[j].update(prec1.item(), input.size(0))
                 top5[j].update(prec5.item(), input.size(0))
-
+                conf_1_c_sum[j] = (conf_1_c_sum[j] * conf_1_c_count[j] + conf_1_c)/(conf_1_c_count[j] + conf_1_correct_count)
+                conf_1_w_sum[j] = (conf_1_w_sum[j] * conf_1_w_count[j] + conf_1_w)/(conf_1_w_count[j] + 256 - conf_1_correct_count)
+                conf_1_c_count[j] = conf_1_c_count[j] + conf_1_correct_count
+                conf_1_w_count[j] = conf_1_w_count[j] + 256 - conf_1_correct_count 
             # measure elapsed time
             batch_time.update(time.time() - end)
             end = time.time()
@@ -260,7 +278,8 @@ def validate(val_loader, model, criterion):
                         loss=losses, top1=top1[-1], top5=top5[-1]))
             '''
     for j in range(args.nBlocks):
-        print(' * prec@1 {top1.avg:.3f} prec@5 {top5.avg:.3f}'.format(top1=top1[j], top5=top5[j]))
+        print(' exit {} prec@1 {top1.avg:.3f} '.format(j,top1=top1[j]))
+        print(' exit {} prec@1 conf correct {correct:.3f} prec@1 conf wrong {wrong:.3f}'.format(j,correct=conf_1_c_sum[j], wrong=conf_1_w_sum[j]))
     # print(' * prec@1 {top1.avg:.3f} prec@5 {top5.avg:.3f}'.format(top1=top1[-1], top5=top5[-1]))
     top1_exits = [top1[0].avg,top1[1].avg,top1[2].avg,top1[3].avg,top1[4].avg]
     print(top1_exits)
@@ -326,14 +345,22 @@ def accuracy(output, target, topk=(1,)):
     maxk = max(topk)
     batch_size = target.size(0)
 
-    _, pred = output.topk(maxk, 1, True, True)
+    conf, pred = output.topk(maxk, 1, True, True)
     pred = pred.t()
+    conf = conf.t()
     correct = pred.eq(target.view(1, -1).expand_as(pred))
-
+    conf_c = conf * correct
+    conf_w = conf * (~correct) 
     res = []
     for k in topk:
         correct_k = correct[:k].view(-1).float().sum(0)
         res.append(correct_k.mul_(100.0 / batch_size))
+    correct_count = torch.sum((correct[:1] == True).int())
+    conf_1_c = conf_c[:1].view(-1).float().sum(0)
+    conf_1_w = conf_w[:1].view(-1).float().sum(0)
+    res.append(conf_1_c)
+    res.append(conf_1_w)
+    res.append(correct_count)
     return res
 
 def adjust_learning_rate(optimizer, epoch, args, batch=None,
