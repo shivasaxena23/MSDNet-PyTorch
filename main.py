@@ -143,6 +143,7 @@ def main():
     print('********** Final prediction results **********')
     validate(test_loader, model, criterion)
 
+    #print(conf,"conf...............\n")
     save_final_probabilities(conf)
 
     return 
@@ -266,8 +267,8 @@ def validate(val_loader, model, criterion):
                 conf_1_w_sum[j] = (conf_1_w_sum[j] * conf_1_w_count[j] + conf_1_w)/(conf_1_w_count[j] + 256 - conf_1_correct_count)
                 conf_1_c_count[j] = conf_1_c_count[j] + conf_1_correct_count
                 conf_1_w_count[j] = conf_1_w_count[j] + 256 - conf_1_correct_count
-                conf_1_c_prob = conf_1_c_prob + conf_c_batch.tolist()
-                conf_1_w_prob = conf_1_w_prob + conf_w_batch.tolist()
+                conf_1_c_prob[j] = conf_1_c_prob[j] + conf_c_batch.tolist()
+                conf_1_w_prob[j] = conf_1_w_prob[j] + conf_w_batch.tolist()
             # measure elapsed time
             batch_time.update(time.time() - end)
             end = time.time()
@@ -296,18 +297,22 @@ def save_final_probabilities(conf):
     result_filename_c = os.path.join(args.save, 'confidence_c.tsv')
     result_filename_w = os.path.join(args.save, 'confidence_w.tsv')
 
-    confidence_c = ["\tExit\tConfidence\tClass"]
-    confidence_w = ["\tExit\tConfidence\tClass"]
+    confidence_c = ['\tExit\tConfidence\tClass']
+    confidence_w = ['\tExit\tConfidence\tClass']
+
+    #print(conf[0],"conf 0")
+    print(len(conf[0]),"conf 0 size")
 
     for exit in range(args.nBlocks):
         for prob in conf[0][exit]:
-            if prob is not 0.0:
-                confidence_c.append(('\t{:.4f}' * 3).format(exit,prob,10))
+            #print(len(prob),"Here.....")
+            if prob[0] != 0.00:
+                confidence_c.append(('\t{}\t{:.4f}').format(exit,prob[0]))
 
     for exit in range(args.nBlocks):
         for prob in conf[1][exit]:
-            if prob is not 0.0:
-                confidence_w.append(('\t{:.4f}' * 3).format(exit,prob,10))
+            if prob[0] != 0.00:
+                confidence_w.append(('\t{}\t{:.4f}').format(exit,prob[0]))
 
 
     with open(result_filename_c, 'w') as f:

@@ -1,0 +1,532 @@
+Using base prefix '/cvmfs/soft.computecanada.ca/easybuild/software/2017/Core/python/3.6.3'
+New python executable in /localscratch/shiva23.22666018.0/env/bin/python
+Installing setuptools, pip, wheel...done.
+Ignoring pip: markers 'python_version < "3"' don't match your environment
+Collecting torch
+Collecting torchvision
+Collecting numpy (from torch)
+Collecting pillow>=4.1.1 (from torchvision)
+Collecting six (from torchvision)
+Installing collected packages: numpy, torch, pillow, six, torchvision
+Successfully installed numpy-1.17.4 pillow-6.2.1 six-1.13.0 torch-1.3.1 torchvision-0.4.0
+building network of steps: 
+[1, 2, 3, 4, 5] 15
+ ********************** Block 1  **********************
+|		inScales 3 outScales 3 inChannels 16 outChannels 6		|
+
+ ********************** Block 2  **********************
+|		inScales 3 outScales 3 inChannels 22 outChannels 6		|
+
+|		inScales 3 outScales 3 inChannels 28 outChannels 6		|
+
+ ********************** Block 3  **********************
+|		inScales 3 outScales 3 inChannels 34 outChannels 6		|
+
+|		inScales 3 outScales 3 inChannels 40 outChannels 6		|
+
+|		inScales 3 outScales 2 inChannels 46 outChannels 6		|
+|		Transition layer inserted! (max), inChannels 52, outChannels 26	|
+
+ ********************** Block 4  **********************
+|		inScales 2 outScales 2 inChannels 26 outChannels 6		|
+
+|		inScales 2 outScales 2 inChannels 32 outChannels 6		|
+
+|		inScales 2 outScales 2 inChannels 38 outChannels 6		|
+
+|		inScales 2 outScales 2 inChannels 44 outChannels 6		|
+
+ ********************** Block 5  **********************
+|		inScales 2 outScales 1 inChannels 50 outChannels 6		|
+|		Transition layer inserted! (max), inChannels 56, outChannels 28	|
+
+|		inScales 1 outScales 1 inChannels 28 outChannels 6		|
+
+|		inScales 1 outScales 1 inChannels 34 outChannels 6		|
+
+|		inScales 1 outScales 1 inChannels 40 outChannels 6		|
+
+|		inScales 1 outScales 1 inChannels 46 outChannels 6		|
+
+---------------------
+FLOPs: 6.85M, Params: 0.29M
+---------------------
+FLOPs: 14.33M, Params: 0.63M
+---------------------
+FLOPs: 27.50M, Params: 0.98M
+---------------------
+FLOPs: 41.67M, Params: 1.45M
+---------------------
+FLOPs: 58.42M, Params: 2.02M
+building network of steps: 
+[1, 2, 3, 4, 5] 15
+ ********************** Block 1  **********************
+|		inScales 3 outScales 3 inChannels 16 outChannels 6		|
+
+ ********************** Block 2  **********************
+|		inScales 3 outScales 3 inChannels 22 outChannels 6		|
+
+|		inScales 3 outScales 3 inChannels 28 outChannels 6		|
+
+ ********************** Block 3  **********************
+|		inScales 3 outScales 3 inChannels 34 outChannels 6		|
+
+|		inScales 3 outScales 3 inChannels 40 outChannels 6		|
+
+|		inScales 3 outScales 2 inChannels 46 outChannels 6		|
+|		Transition layer inserted! (max), inChannels 52, outChannels 26	|
+
+ ********************** Block 4  **********************
+|		inScales 2 outScales 2 inChannels 26 outChannels 6		|
+
+|		inScales 2 outScales 2 inChannels 32 outChannels 6		|
+
+|		inScales 2 outScales 2 inChannels 38 outChannels 6		|
+
+|		inScales 2 outScales 2 inChannels 44 outChannels 6		|
+
+ ********************** Block 5  **********************
+|		inScales 2 outScales 1 inChannels 50 outChannels 6		|
+|		Transition layer inserted! (max), inChannels 56, outChannels 28	|
+
+|		inScales 1 outScales 1 inChannels 28 outChannels 6		|
+
+|		inScales 1 outScales 1 inChannels 34 outChannels 6		|
+
+|		inScales 1 outScales 1 inChannels 40 outChannels 6		|
+
+|		inScales 1 outScales 1 inChannels 46 outChannels 6		|
+
+Files already downloaded and verified
+Files already downloaded and verified
+!!!!!! Load train_set_index !!!!!!
+ exit 0 prec@1 49.620 
+ exit 0 prec@1 conf correct 0.613 prec@1 conf wrong 0.439
+ exit 1 prec@1 51.300 
+ exit 1 prec@1 conf correct 0.641 prec@1 conf wrong 0.447
+ exit 2 prec@1 53.780 
+ exit 2 prec@1 conf correct 0.673 prec@1 conf wrong 0.471
+ exit 3 prec@1 55.000 
+ exit 3 prec@1 conf correct 0.690 prec@1 conf wrong 0.479
+ exit 4 prec@1 54.320 
+ exit 4 prec@1 conf correct 0.699 prec@1 conf wrong 0.485
+[49.619999938964845, 51.29999996948242, 53.77999999389648, 54.999999981689456, 54.31999999389649]
+Best var_prec1 54.31999999389649
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_000.pth.tar'
+=> saved checkpoint './save_models/checkpoint_000.pth.tar'
+Epoch : 0  of  25 
+
+ exit 0 prec@1 57.120 
+ exit 0 prec@1 conf correct 0.672 prec@1 conf wrong 0.460
+ exit 1 prec@1 59.600 
+ exit 1 prec@1 conf correct 0.693 prec@1 conf wrong 0.461
+ exit 2 prec@1 62.600 
+ exit 2 prec@1 conf correct 0.743 prec@1 conf wrong 0.484
+ exit 3 prec@1 59.400 
+ exit 3 prec@1 conf correct 0.762 prec@1 conf wrong 0.519
+ exit 4 prec@1 57.020 
+ exit 4 prec@1 conf correct 0.775 prec@1 conf wrong 0.542
+[57.11999995727539, 59.600000006103514, 62.59999993896484, 59.40000001220703, 57.020000006103515]
+Best var_prec1 57.020000006103515
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_001.pth.tar'
+=> saved checkpoint './save_models/checkpoint_001.pth.tar'
+Epoch : 1  of  25 
+
+ exit 0 prec@1 60.920 
+ exit 0 prec@1 conf correct 0.709 prec@1 conf wrong 0.479
+ exit 1 prec@1 63.420 
+ exit 1 prec@1 conf correct 0.735 prec@1 conf wrong 0.478
+ exit 2 prec@1 65.780 
+ exit 2 prec@1 conf correct 0.779 prec@1 conf wrong 0.497
+ exit 3 prec@1 67.800 
+ exit 3 prec@1 conf correct 0.795 prec@1 conf wrong 0.508
+ exit 4 prec@1 66.980 
+ exit 4 prec@1 conf correct 0.801 prec@1 conf wrong 0.522
+[60.91999996948242, 63.41999998779297, 65.78000001220703, 67.7999999267578, 66.98000003662109]
+Best var_prec1 66.98000003662109
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_002.pth.tar'
+=> saved checkpoint './save_models/checkpoint_002.pth.tar'
+Epoch : 2  of  25 
+
+ exit 0 prec@1 64.200 
+ exit 0 prec@1 conf correct 0.745 prec@1 conf wrong 0.502
+ exit 1 prec@1 66.540 
+ exit 1 prec@1 conf correct 0.764 prec@1 conf wrong 0.505
+ exit 2 prec@1 69.920 
+ exit 2 prec@1 conf correct 0.797 prec@1 conf wrong 0.528
+ exit 3 prec@1 68.700 
+ exit 3 prec@1 conf correct 0.803 prec@1 conf wrong 0.544
+ exit 4 prec@1 70.340 
+ exit 4 prec@1 conf correct 0.809 prec@1 conf wrong 0.537
+[64.20000000610352, 66.54000002441406, 69.91999993896485, 68.70000004882813, 70.3399999633789]
+Best var_prec1 70.3399999633789
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_003.pth.tar'
+=> saved checkpoint './save_models/checkpoint_003.pth.tar'
+Epoch : 3  of  25 
+
+ exit 0 prec@1 65.680 
+ exit 0 prec@1 conf correct 0.768 prec@1 conf wrong 0.516
+ exit 1 prec@1 65.200 
+ exit 1 prec@1 conf correct 0.795 prec@1 conf wrong 0.548
+ exit 2 prec@1 68.660 
+ exit 2 prec@1 conf correct 0.826 prec@1 conf wrong 0.556
+ exit 3 prec@1 72.400 
+ exit 3 prec@1 conf correct 0.836 prec@1 conf wrong 0.552
+ exit 4 prec@1 71.720 
+ exit 4 prec@1 conf correct 0.840 prec@1 conf wrong 0.559
+[65.68000001220703, 65.19999991455079, 68.66000002441406, 72.40000004882812, 71.72000004882813]
+Best var_prec1 71.72000004882813
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_004.pth.tar'
+=> saved checkpoint './save_models/checkpoint_004.pth.tar'
+Epoch : 4  of  25 
+
+ exit 0 prec@1 70.060 
+ exit 0 prec@1 conf correct 0.808 prec@1 conf wrong 0.523
+ exit 1 prec@1 72.840 
+ exit 1 prec@1 conf correct 0.825 prec@1 conf wrong 0.521
+ exit 2 prec@1 76.040 
+ exit 2 prec@1 conf correct 0.853 prec@1 conf wrong 0.542
+ exit 3 prec@1 77.520 
+ exit 3 prec@1 conf correct 0.868 prec@1 conf wrong 0.541
+ exit 4 prec@1 78.520 
+ exit 4 prec@1 conf correct 0.874 prec@1 conf wrong 0.553
+[70.0599999633789, 72.84, 76.03999992675782, 77.51999995117187, 78.51999995117187]
+Best var_prec1 78.51999995117187
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_005.pth.tar'
+=> saved checkpoint './save_models/checkpoint_005.pth.tar'
+Epoch : 5  of  25 
+
+ exit 0 prec@1 69.960 
+ exit 0 prec@1 conf correct 0.797 prec@1 conf wrong 0.524
+ exit 1 prec@1 72.380 
+ exit 1 prec@1 conf correct 0.821 prec@1 conf wrong 0.535
+ exit 2 prec@1 75.260 
+ exit 2 prec@1 conf correct 0.841 prec@1 conf wrong 0.552
+ exit 3 prec@1 74.780 
+ exit 3 prec@1 conf correct 0.848 prec@1 conf wrong 0.568
+ exit 4 prec@1 73.480 
+ exit 4 prec@1 conf correct 0.854 prec@1 conf wrong 0.587
+[69.95999995117188, 72.37999993896484, 75.25999993896484, 74.77999987792968, 73.48000004882813]
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_006.pth.tar'
+=> saved checkpoint './save_models/checkpoint_006.pth.tar'
+Epoch : 6  of  25 
+
+ exit 0 prec@1 74.300 
+ exit 0 prec@1 conf correct 0.822 prec@1 conf wrong 0.528
+ exit 1 prec@1 75.900 
+ exit 1 prec@1 conf correct 0.836 prec@1 conf wrong 0.531
+ exit 2 prec@1 78.020 
+ exit 2 prec@1 conf correct 0.851 prec@1 conf wrong 0.541
+ exit 3 prec@1 78.280 
+ exit 3 prec@1 conf correct 0.858 prec@1 conf wrong 0.545
+ exit 4 prec@1 77.560 
+ exit 4 prec@1 conf correct 0.865 prec@1 conf wrong 0.557
+[74.29999993896485, 75.89999986572266, 78.01999991455078, 78.28, 77.55999989013672]
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_007.pth.tar'
+=> saved checkpoint './save_models/checkpoint_007.pth.tar'
+Epoch : 7  of  25 
+
+ exit 0 prec@1 73.780 
+ exit 0 prec@1 conf correct 0.809 prec@1 conf wrong 0.523
+ exit 1 prec@1 75.740 
+ exit 1 prec@1 conf correct 0.834 prec@1 conf wrong 0.530
+ exit 2 prec@1 79.600 
+ exit 2 prec@1 conf correct 0.867 prec@1 conf wrong 0.534
+ exit 3 prec@1 81.920 
+ exit 3 prec@1 conf correct 0.872 prec@1 conf wrong 0.531
+ exit 4 prec@1 81.600 
+ exit 4 prec@1 conf correct 0.876 prec@1 conf wrong 0.540
+[73.77999992675781, 75.73999992675782, 79.59999987792969, 81.91999986572266, 81.6]
+Best var_prec1 81.6
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_008.pth.tar'
+=> saved checkpoint './save_models/checkpoint_008.pth.tar'
+Epoch : 8  of  25 
+
+ exit 0 prec@1 73.480 
+ exit 0 prec@1 conf correct 0.811 prec@1 conf wrong 0.523
+ exit 1 prec@1 75.560 
+ exit 1 prec@1 conf correct 0.832 prec@1 conf wrong 0.527
+ exit 2 prec@1 77.460 
+ exit 2 prec@1 conf correct 0.862 prec@1 conf wrong 0.543
+ exit 3 prec@1 80.780 
+ exit 3 prec@1 conf correct 0.880 prec@1 conf wrong 0.547
+ exit 4 prec@1 81.200 
+ exit 4 prec@1 conf correct 0.888 prec@1 conf wrong 0.549
+[73.47999995117188, 75.55999985351562, 77.4600000366211, 80.77999996337891, 81.19999997558594]
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_009.pth.tar'
+=> saved checkpoint './save_models/checkpoint_009.pth.tar'
+Epoch : 9  of  25 
+
+ exit 0 prec@1 76.640 
+ exit 0 prec@1 conf correct 0.825 prec@1 conf wrong 0.522
+ exit 1 prec@1 78.800 
+ exit 1 prec@1 conf correct 0.847 prec@1 conf wrong 0.514
+ exit 2 prec@1 81.980 
+ exit 2 prec@1 conf correct 0.874 prec@1 conf wrong 0.532
+ exit 3 prec@1 83.440 
+ exit 3 prec@1 conf correct 0.887 prec@1 conf wrong 0.539
+ exit 4 prec@1 83.280 
+ exit 4 prec@1 conf correct 0.891 prec@1 conf wrong 0.538
+[76.64000002441406, 78.79999997558593, 81.98000004882813, 83.43999998779297, 83.27999985351562]
+Best var_prec1 83.27999985351562
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_010.pth.tar'
+=> saved checkpoint './save_models/checkpoint_010.pth.tar'
+Epoch : 10  of  25 
+
+ exit 0 prec@1 77.020 
+ exit 0 prec@1 conf correct 0.843 prec@1 conf wrong 0.521
+ exit 1 prec@1 79.160 
+ exit 1 prec@1 conf correct 0.858 prec@1 conf wrong 0.520
+ exit 2 prec@1 81.840 
+ exit 2 prec@1 conf correct 0.885 prec@1 conf wrong 0.544
+ exit 3 prec@1 83.240 
+ exit 3 prec@1 conf correct 0.898 prec@1 conf wrong 0.543
+ exit 4 prec@1 83.140 
+ exit 4 prec@1 conf correct 0.902 prec@1 conf wrong 0.542
+[77.01999986572265, 79.1599999267578, 81.83999987792969, 83.23999986572265, 83.13999997558594]
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_011.pth.tar'
+=> saved checkpoint './save_models/checkpoint_011.pth.tar'
+Epoch : 11  of  25 
+
+ exit 0 prec@1 76.260 
+ exit 0 prec@1 conf correct 0.844 prec@1 conf wrong 0.523
+ exit 1 prec@1 78.940 
+ exit 1 prec@1 conf correct 0.864 prec@1 conf wrong 0.539
+ exit 2 prec@1 80.880 
+ exit 2 prec@1 conf correct 0.891 prec@1 conf wrong 0.564
+ exit 3 prec@1 81.700 
+ exit 3 prec@1 conf correct 0.906 prec@1 conf wrong 0.575
+ exit 4 prec@1 82.400 
+ exit 4 prec@1 conf correct 0.908 prec@1 conf wrong 0.580
+[76.2599999633789, 78.93999995117187, 80.87999986572265, 81.69999985351562, 82.39999992675781]
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_012.pth.tar'
+=> saved checkpoint './save_models/checkpoint_012.pth.tar'
+Epoch : 12  of  25 
+
+ exit 0 prec@1 80.420 
+ exit 0 prec@1 conf correct 0.855 prec@1 conf wrong 0.522
+ exit 1 prec@1 82.820 
+ exit 1 prec@1 conf correct 0.877 prec@1 conf wrong 0.526
+ exit 2 prec@1 84.920 
+ exit 2 prec@1 conf correct 0.907 prec@1 conf wrong 0.536
+ exit 3 prec@1 86.780 
+ exit 3 prec@1 conf correct 0.917 prec@1 conf wrong 0.551
+ exit 4 prec@1 87.180 
+ exit 4 prec@1 conf correct 0.924 prec@1 conf wrong 0.553
+[80.42000004882813, 82.81999997558594, 84.91999986572266, 86.78, 87.17999990234375]
+Best var_prec1 87.17999990234375
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_013.pth.tar'
+=> saved checkpoint './save_models/checkpoint_013.pth.tar'
+Epoch : 13  of  25 
+
+ exit 0 prec@1 80.740 
+ exit 0 prec@1 conf correct 0.860 prec@1 conf wrong 0.528
+ exit 1 prec@1 83.040 
+ exit 1 prec@1 conf correct 0.884 prec@1 conf wrong 0.531
+ exit 2 prec@1 86.240 
+ exit 2 prec@1 conf correct 0.908 prec@1 conf wrong 0.538
+ exit 3 prec@1 87.540 
+ exit 3 prec@1 conf correct 0.921 prec@1 conf wrong 0.549
+ exit 4 prec@1 87.860 
+ exit 4 prec@1 conf correct 0.928 prec@1 conf wrong 0.558
+[80.74000004882812, 83.04, 86.23999997558593, 87.53999987792969, 87.85999987792968]
+Best var_prec1 87.85999987792968
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_014.pth.tar'
+=> saved checkpoint './save_models/checkpoint_014.pth.tar'
+Epoch : 14  of  25 
+
+ exit 0 prec@1 81.140 
+ exit 0 prec@1 conf correct 0.866 prec@1 conf wrong 0.534
+ exit 1 prec@1 83.940 
+ exit 1 prec@1 conf correct 0.887 prec@1 conf wrong 0.538
+ exit 2 prec@1 85.960 
+ exit 2 prec@1 conf correct 0.913 prec@1 conf wrong 0.545
+ exit 3 prec@1 87.900 
+ exit 3 prec@1 conf correct 0.924 prec@1 conf wrong 0.544
+ exit 4 prec@1 87.960 
+ exit 4 prec@1 conf correct 0.933 prec@1 conf wrong 0.545
+[81.13999986572266, 83.93999998779297, 85.95999986572265, 87.9, 87.95999989013671]
+Best var_prec1 87.95999989013671
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_015.pth.tar'
+=> saved checkpoint './save_models/checkpoint_015.pth.tar'
+Epoch : 15  of  25 
+
+ exit 0 prec@1 81.880 
+ exit 0 prec@1 conf correct 0.869 prec@1 conf wrong 0.521
+ exit 1 prec@1 83.780 
+ exit 1 prec@1 conf correct 0.887 prec@1 conf wrong 0.526
+ exit 2 prec@1 85.880 
+ exit 2 prec@1 conf correct 0.916 prec@1 conf wrong 0.542
+ exit 3 prec@1 87.660 
+ exit 3 prec@1 conf correct 0.929 prec@1 conf wrong 0.542
+ exit 4 prec@1 87.960 
+ exit 4 prec@1 conf correct 0.937 prec@1 conf wrong 0.551
+[81.87999992675782, 83.77999985351562, 85.87999986572265, 87.65999997558593, 87.95999986572265]
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_016.pth.tar'
+=> saved checkpoint './save_models/checkpoint_016.pth.tar'
+Epoch : 16  of  25 
+
+ exit 0 prec@1 81.680 
+ exit 0 prec@1 conf correct 0.868 prec@1 conf wrong 0.531
+ exit 1 prec@1 83.320 
+ exit 1 prec@1 conf correct 0.891 prec@1 conf wrong 0.537
+ exit 2 prec@1 86.420 
+ exit 2 prec@1 conf correct 0.913 prec@1 conf wrong 0.541
+ exit 3 prec@1 87.820 
+ exit 3 prec@1 conf correct 0.926 prec@1 conf wrong 0.545
+ exit 4 prec@1 88.140 
+ exit 4 prec@1 conf correct 0.935 prec@1 conf wrong 0.556
+[81.67999992675782, 83.31999993896484, 86.41999986572266, 87.82, 88.13999989013672]
+Best var_prec1 88.13999989013672
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_017.pth.tar'
+=> saved checkpoint './save_models/checkpoint_017.pth.tar'
+Epoch : 17  of  25 
+
+ exit 0 prec@1 82.220 
+ exit 0 prec@1 conf correct 0.873 prec@1 conf wrong 0.530
+ exit 1 prec@1 83.640 
+ exit 1 prec@1 conf correct 0.896 prec@1 conf wrong 0.538
+ exit 2 prec@1 86.520 
+ exit 2 prec@1 conf correct 0.921 prec@1 conf wrong 0.546
+ exit 3 prec@1 88.280 
+ exit 3 prec@1 conf correct 0.933 prec@1 conf wrong 0.558
+ exit 4 prec@1 88.560 
+ exit 4 prec@1 conf correct 0.939 prec@1 conf wrong 0.562
+[82.21999989013672, 83.63999996337891, 86.51999998779297, 88.28000004882813, 88.56000004882813]
+Best var_prec1 88.56000004882813
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_018.pth.tar'
+=> saved checkpoint './save_models/checkpoint_018.pth.tar'
+Epoch : 18  of  25 
+
+ exit 0 prec@1 81.460 
+ exit 0 prec@1 conf correct 0.873 prec@1 conf wrong 0.529
+ exit 1 prec@1 83.220 
+ exit 1 prec@1 conf correct 0.897 prec@1 conf wrong 0.541
+ exit 2 prec@1 86.640 
+ exit 2 prec@1 conf correct 0.917 prec@1 conf wrong 0.558
+ exit 3 prec@1 88.120 
+ exit 3 prec@1 conf correct 0.931 prec@1 conf wrong 0.550
+ exit 4 prec@1 88.440 
+ exit 4 prec@1 conf correct 0.938 prec@1 conf wrong 0.558
+[81.45999989013671, 83.21999997558594, 86.63999992675781, 88.1200000366211, 88.43999993896485]
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_019.pth.tar'
+=> saved checkpoint './save_models/checkpoint_019.pth.tar'
+Epoch : 19  of  25 
+
+ exit 0 prec@1 82.400 
+ exit 0 prec@1 conf correct 0.871 prec@1 conf wrong 0.523
+ exit 1 prec@1 83.940 
+ exit 1 prec@1 conf correct 0.893 prec@1 conf wrong 0.533
+ exit 2 prec@1 86.540 
+ exit 2 prec@1 conf correct 0.917 prec@1 conf wrong 0.546
+ exit 3 prec@1 87.860 
+ exit 3 prec@1 conf correct 0.932 prec@1 conf wrong 0.547
+ exit 4 prec@1 88.540 
+ exit 4 prec@1 conf correct 0.939 prec@1 conf wrong 0.550
+[82.39999986572266, 83.9399999267578, 86.53999998779297, 87.85999989013672, 88.53999998779297]
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_020.pth.tar'
+=> saved checkpoint './save_models/checkpoint_020.pth.tar'
+Epoch : 20  of  25 
+
+ exit 0 prec@1 82.240 
+ exit 0 prec@1 conf correct 0.870 prec@1 conf wrong 0.522
+ exit 1 prec@1 83.980 
+ exit 1 prec@1 conf correct 0.892 prec@1 conf wrong 0.527
+ exit 2 prec@1 86.500 
+ exit 2 prec@1 conf correct 0.918 prec@1 conf wrong 0.552
+ exit 3 prec@1 88.140 
+ exit 3 prec@1 conf correct 0.930 prec@1 conf wrong 0.549
+ exit 4 prec@1 88.580 
+ exit 4 prec@1 conf correct 0.939 prec@1 conf wrong 0.558
+[82.24000002441406, 83.97999991455079, 86.49999991455078, 88.14000004882813, 88.57999993896485]
+Best var_prec1 88.57999993896485
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_021.pth.tar'
+=> saved checkpoint './save_models/checkpoint_021.pth.tar'
+Epoch : 21  of  25 
+
+ exit 0 prec@1 81.860 
+ exit 0 prec@1 conf correct 0.872 prec@1 conf wrong 0.532
+ exit 1 prec@1 84.100 
+ exit 1 prec@1 conf correct 0.893 prec@1 conf wrong 0.542
+ exit 2 prec@1 87.140 
+ exit 2 prec@1 conf correct 0.919 prec@1 conf wrong 0.542
+ exit 3 prec@1 88.540 
+ exit 3 prec@1 conf correct 0.934 prec@1 conf wrong 0.551
+ exit 4 prec@1 88.740 
+ exit 4 prec@1 conf correct 0.941 prec@1 conf wrong 0.562
+[81.85999995117187, 84.09999985351563, 87.13999986572266, 88.53999987792969, 88.73999998779297]
+Best var_prec1 88.73999998779297
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_022.pth.tar'
+=> saved checkpoint './save_models/checkpoint_022.pth.tar'
+Epoch : 22  of  25 
+
+ exit 0 prec@1 82.120 
+ exit 0 prec@1 conf correct 0.872 prec@1 conf wrong 0.527
+ exit 1 prec@1 83.980 
+ exit 1 prec@1 conf correct 0.895 prec@1 conf wrong 0.530
+ exit 2 prec@1 86.840 
+ exit 2 prec@1 conf correct 0.920 prec@1 conf wrong 0.548
+ exit 3 prec@1 88.400 
+ exit 3 prec@1 conf correct 0.931 prec@1 conf wrong 0.553
+ exit 4 prec@1 88.440 
+ exit 4 prec@1 conf correct 0.941 prec@1 conf wrong 0.560
+[82.11999997558594, 83.97999998779297, 86.84000002441407, 88.39999990234375, 88.44000002441406]
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_023.pth.tar'
+=> saved checkpoint './save_models/checkpoint_023.pth.tar'
+Epoch : 23  of  25 
+
+ exit 0 prec@1 82.280 
+ exit 0 prec@1 conf correct 0.873 prec@1 conf wrong 0.520
+ exit 1 prec@1 84.080 
+ exit 1 prec@1 conf correct 0.895 prec@1 conf wrong 0.537
+ exit 2 prec@1 86.840 
+ exit 2 prec@1 conf correct 0.918 prec@1 conf wrong 0.554
+ exit 3 prec@1 88.040 
+ exit 3 prec@1 conf correct 0.935 prec@1 conf wrong 0.554
+ exit 4 prec@1 89.060 
+ exit 4 prec@1 conf correct 0.938 prec@1 conf wrong 0.562
+[82.28000003662109, 84.07999996337891, 86.84000001220703, 88.03999989013671, 89.06]
+Best var_prec1 89.06
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=25, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_024.pth.tar'
+=> saved checkpoint './save_models/checkpoint_024.pth.tar'
+Epoch : 24  of  25 
+
+Best val_prec1: 89.0600 at epoch 24
+********** Final prediction results **********
+ exit 0 prec@1 82.620 
+ exit 0 prec@1 conf correct 0.895 prec@1 conf wrong 0.550
+ exit 1 prec@1 84.940 
+ exit 1 prec@1 conf correct 0.913 prec@1 conf wrong 0.561
+ exit 2 prec@1 86.820 
+ exit 2 prec@1 conf correct 0.934 prec@1 conf wrong 0.570
+ exit 3 prec@1 88.270 
+ exit 3 prec@1 conf correct 0.945 prec@1 conf wrong 0.579
+ exit 4 prec@1 88.310 
+ exit 4 prec@1 conf correct 0.951 prec@1 conf wrong 0.575
+[82.62, 84.94, 86.82, 88.27, 88.31]
+5 conf 0 size
