@@ -1,0 +1,141 @@
+Using base prefix '/cvmfs/soft.computecanada.ca/easybuild/software/2017/Core/python/3.6.3'
+New python executable in /localscratch/shiva23.22687033.0/env/bin/python
+Installing setuptools, pip, wheel...done.
+Ignoring pip: markers 'python_version < "3"' don't match your environment
+Collecting torch
+Collecting torchvision
+Collecting numpy (from torch)
+Collecting pillow>=4.1.1 (from torchvision)
+Collecting six (from torchvision)
+Installing collected packages: numpy, torch, pillow, six, torchvision
+Successfully installed numpy-1.17.4 pillow-6.2.1 six-1.13.0 torch-1.3.1 torchvision-0.4.0
+building network of steps: 
+[1, 2, 3, 4, 5] 15
+ ********************** Block 1  **********************
+|		inScales 3 outScales 3 inChannels 16 outChannels 6		|
+
+ ********************** Block 2  **********************
+|		inScales 3 outScales 3 inChannels 22 outChannels 6		|
+
+|		inScales 3 outScales 3 inChannels 28 outChannels 6		|
+
+ ********************** Block 3  **********************
+|		inScales 3 outScales 3 inChannels 34 outChannels 6		|
+
+|		inScales 3 outScales 3 inChannels 40 outChannels 6		|
+
+|		inScales 3 outScales 2 inChannels 46 outChannels 6		|
+|		Transition layer inserted! (max), inChannels 52, outChannels 26	|
+
+ ********************** Block 4  **********************
+|		inScales 2 outScales 2 inChannels 26 outChannels 6		|
+
+|		inScales 2 outScales 2 inChannels 32 outChannels 6		|
+
+|		inScales 2 outScales 2 inChannels 38 outChannels 6		|
+
+|		inScales 2 outScales 2 inChannels 44 outChannels 6		|
+
+ ********************** Block 5  **********************
+|		inScales 2 outScales 1 inChannels 50 outChannels 6		|
+|		Transition layer inserted! (max), inChannels 56, outChannels 28	|
+
+|		inScales 1 outScales 1 inChannels 28 outChannels 6		|
+
+|		inScales 1 outScales 1 inChannels 34 outChannels 6		|
+
+|		inScales 1 outScales 1 inChannels 40 outChannels 6		|
+
+|		inScales 1 outScales 1 inChannels 46 outChannels 6		|
+
+---------------------
+FLOPs: 6.85M, Params: 0.29M
+---------------------
+FLOPs: 14.33M, Params: 0.63M
+---------------------
+FLOPs: 27.50M, Params: 0.98M
+---------------------
+FLOPs: 41.67M, Params: 1.45M
+---------------------
+FLOPs: 58.42M, Params: 2.02M
+building network of steps: 
+[1, 2, 3, 4, 5] 15
+ ********************** Block 1  **********************
+|		inScales 3 outScales 3 inChannels 16 outChannels 6		|
+
+ ********************** Block 2  **********************
+|		inScales 3 outScales 3 inChannels 22 outChannels 6		|
+
+|		inScales 3 outScales 3 inChannels 28 outChannels 6		|
+
+ ********************** Block 3  **********************
+|		inScales 3 outScales 3 inChannels 34 outChannels 6		|
+
+|		inScales 3 outScales 3 inChannels 40 outChannels 6		|
+
+|		inScales 3 outScales 2 inChannels 46 outChannels 6		|
+|		Transition layer inserted! (max), inChannels 52, outChannels 26	|
+
+ ********************** Block 4  **********************
+|		inScales 2 outScales 2 inChannels 26 outChannels 6		|
+
+|		inScales 2 outScales 2 inChannels 32 outChannels 6		|
+
+|		inScales 2 outScales 2 inChannels 38 outChannels 6		|
+
+|		inScales 2 outScales 2 inChannels 44 outChannels 6		|
+
+ ********************** Block 5  **********************
+|		inScales 2 outScales 1 inChannels 50 outChannels 6		|
+|		Transition layer inserted! (max), inChannels 56, outChannels 28	|
+
+|		inScales 1 outScales 1 inChannels 28 outChannels 6		|
+
+|		inScales 1 outScales 1 inChannels 34 outChannels 6		|
+
+|		inScales 1 outScales 1 inChannels 40 outChannels 6		|
+
+|		inScales 1 outScales 1 inChannels 46 outChannels 6		|
+
+Files already downloaded and verified
+Files already downloaded and verified
+!!!!!! Load train_set_index !!!!!!
+ exit 0 prec@1 50.920 
+ exit 0 prec@1 conf correct 0.597 prec@1 conf wrong 0.427
+ exit 1 prec@1 52.960 
+ exit 1 prec@1 conf correct 0.624 prec@1 conf wrong 0.433
+ exit 2 prec@1 52.560 
+ exit 2 prec@1 conf correct 0.631 prec@1 conf wrong 0.432
+ exit 3 prec@1 53.000 
+ exit 3 prec@1 conf correct 0.636 prec@1 conf wrong 0.431
+ exit 4 prec@1 50.460 
+ exit 4 prec@1 conf correct 0.648 prec@1 conf wrong 0.457
+[50.91999996948242, 52.95999999389648, 52.55999998779297, 52.99999998779297, 50.460000024414065]
+Best var_prec1 50.460000024414065
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=1, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_000.pth.tar'
+=> saved checkpoint './save_models/checkpoint_000.pth.tar'
+Epoch : 0  of  1 
+
+Best val_prec1: 50.4600 at epoch 0
+********** Final prediction results **********
+ exit 0 prec@1 53.620 
+ exit 0 prec@1 conf correct 0.643 prec@1 conf wrong 0.457
+ exit 1 prec@1 55.270 
+ exit 1 prec@1 conf correct 0.665 prec@1 conf wrong 0.462
+ exit 2 prec@1 54.320 
+ exit 2 prec@1 conf correct 0.671 prec@1 conf wrong 0.467
+ exit 3 prec@1 55.100 
+ exit 3 prec@1 conf correct 0.673 prec@1 conf wrong 0.463
+ exit 4 prec@1 51.550 
+ exit 4 prec@1 conf correct 0.683 prec@1 conf wrong 0.495
+[53.62, 55.27, 54.32, 55.1, 51.55]
+5 conf 0 size
+Traceback (most recent call last):
+  File "main.py", line 443, in <module>
+    main()
+  File "main.py", line 147, in main
+    save_final_probabilities(conf)
+  File "main.py", line 312, in save_final_probabilities
+    temp1 = np.array(conf[0][exit])
+NameError: name 'np' is not defined

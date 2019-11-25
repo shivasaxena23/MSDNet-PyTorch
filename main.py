@@ -9,7 +9,7 @@ import sys
 import math
 import time
 import shutil
-
+import numpy as np
 from dataloader import get_dataloaders
 from args import arg_parser
 from adaptive_inference import dynamic_evaluate
@@ -190,7 +190,7 @@ def train(train_loader, model, criterion, optimizer, epoch):
             output[exit] = sm(output[exit])
 
         for j in range(len(output)):
-            prec1, prec5, conf_1_c, conf_1_w, conf_1_correct_count, conf_c_batch, conf_w_batch = accuracy(output[j].data, target, topk=(1, 5))
+            prec1, prec5, conf_1_c, conf_1_w, conf_1_correct_count, conf_c_batch, class_c_batch, conf_w_batch, class_w_batch = accuracy(output[j].data, target, topk=(1, 5))
             top1[j].update(prec1.item(), input.size(0))
             top5[j].update(prec5.item(), input.size(0))
 
@@ -227,6 +227,8 @@ def validate(val_loader, model, criterion):
     conf_1_w_count = [0] * args.nBlocks
     conf_1_c_prob = [[] for _ in range(args.nBlocks)]
     conf_1_w_prob = [[] for _ in range(args.nBlocks)]
+    conf_1_c_class = [[] for _ in range(args.nBlocks)]
+    conf_1_w_class = [[] for _ in range(args.nBlocks)]
 
     for i in range(args.nBlocks):
         top1.append(AverageMeter())
@@ -260,7 +262,7 @@ def validate(val_loader, model, criterion):
 
 
             for j in range(len(output)):
-                prec1, prec5, conf_1_c, conf_1_w, conf_1_correct_count, conf_c_batch, conf_w_batch = accuracy(output[j].data, target, topk=(1, 5))
+                prec1, prec5, conf_1_c, conf_1_w, conf_1_correct_count, conf_c_batch, class_c_batch, conf_w_batch, class_w_batch = accuracy(output[j].data, target, topk=(1, 5))
                 top1[j].update(prec1.item(), input.size(0))
                 top5[j].update(prec5.item(), input.size(0))
                 conf_1_c_sum[j] = (conf_1_c_sum[j] * conf_1_c_count[j] + conf_1_c)/(conf_1_c_count[j] + conf_1_correct_count)
@@ -269,6 +271,9 @@ def validate(val_loader, model, criterion):
                 conf_1_w_count[j] = conf_1_w_count[j] + 256 - conf_1_correct_count
                 conf_1_c_prob[j] = conf_1_c_prob[j] + conf_c_batch.tolist()
                 conf_1_w_prob[j] = conf_1_w_prob[j] + conf_w_batch.tolist()
+                conf_1_c_class[j] = conf_1_c_class[j] + class_c_batch
+                conf_1_w_class[j] = conf_1_w_class[j] + class_w_batch
+
             # measure elapsed time
             batch_time.update(time.time() - end)
             end = time.time()
@@ -289,8 +294,7 @@ def validate(val_loader, model, criterion):
         print(' exit {} prec@1 conf correct {correct:.3f} prec@1 conf wrong {wrong:.3f}'.format(j,correct=conf_1_c_sum[j], wrong=conf_1_w_sum[j]))
     # print(' * prec@1 {top1.avg:.3f} prec@5 {top5.avg:.3f}'.format(top1=top1[-1], top5=top5[-1]))
     top1_exits = [top1[0].avg,top1[1].avg,top1[2].avg,top1[3].avg,top1[4].avg]
-    print(top1_exits)
-    conf = [conf_1_c_prob, conf_1_w_prob]
+    conf = [conf_1_c_prob, conf_1_w_prob, conf_1_c_class, conf_1_w_class]
     return conf, losses.avg, top1_exits, top1[-1].avg, top5[-1].avg
 
 def save_final_probabilities(conf):
@@ -300,19 +304,15 @@ def save_final_probabilities(conf):
     confidence_c = ['\tExit\tConfidence\tClass']
     confidence_w = ['\tExit\tConfidence\tClass']
 
-    #print(conf[0],"conf 0")
-    print(len(conf[0]),"conf 0 size")
+    for exit in range(args.nBlocks):
+        for prob in range(len(conf[0][exit])):
+            if conf[0][exit][prob][0] != 0.00:
+                confidence_c.append(('\t{}\t{:.4f}\t{}').format(exit,conf[0][exit][prob][0],conf[2][exit][prob]))
 
     for exit in range(args.nBlocks):
-        for prob in conf[0][exit]:
-            #print(len(prob),"Here.....")
-            if prob[0] != 0.00:
-                confidence_c.append(('\t{}\t{:.4f}').format(exit,prob[0]))
-
-    for exit in range(args.nBlocks):
-        for prob in conf[1][exit]:
-            if prob[0] != 0.00:
-                confidence_w.append(('\t{}\t{:.4f}').format(exit,prob[0]))
+        for prob in range(len(conf[1][exit])):
+            if conf[1][exit][prob][0] != 0.00:
+                confidence_w.append(('\t{}\t{:.4f}\t{}').format(exit,conf[1][exit][prob][0],conf[3][exit][prob]))
 
 
     with open(result_filename_c, 'w') as f:
@@ -386,7 +386,9 @@ def accuracy(output, target, topk=(1,)):
     conf = conf.t()
     correct = pred.eq(target.view(1, -1).expand_as(pred))
     conf_c = conf * correct
+    class_c = correct[:1] * target
     conf_w = conf * (~correct) 
+    class_w = (~correct[:1]) * target
     res = []
     for k in topk:
         correct_k = correct[:k].view(-1).float().sum(0)
@@ -398,7 +400,9 @@ def accuracy(output, target, topk=(1,)):
     res.append(conf_1_w)
     res.append(correct_count)
     res.append(conf_c[:1].t())
+    res.append(class_c.tolist()[0])
     res.append(conf_w[:1].t())
+    res.append(class_w.tolist()[0])
     return res
 
 def adjust_learning_rate(optimizer, epoch, args, batch=None,

@@ -1,0 +1,1627 @@
+Using base prefix '/cvmfs/soft.computecanada.ca/easybuild/software/2017/Core/python/3.6.3'
+New python executable in /localscratch/shiva23.22687483.0/env/bin/python
+Installing setuptools, pip, wheel...done.
+Ignoring pip: markers 'python_version < "3"' don't match your environment
+Collecting torch
+Collecting torchvision
+Collecting numpy
+Collecting pandas
+Collecting pillow>=4.1.1 (from torchvision)
+Collecting six (from torchvision)
+Collecting pytz>=2017.2 (from pandas)
+Collecting python-dateutil>=2.6.1 (from pandas)
+Installing collected packages: numpy, torch, pillow, six, torchvision, pytz, python-dateutil, pandas
+Successfully installed numpy-1.17.4 pandas-0.25.3 pillow-6.2.1 python-dateutil-2.8.1 pytz-2019.3 six-1.13.0 torch-1.3.1 torchvision-0.4.0
+building network of steps: 
+[1, 2, 3, 4, 5] 15
+ ********************** Block 1  **********************
+|		inScales 3 outScales 3 inChannels 16 outChannels 6		|
+
+ ********************** Block 2  **********************
+|		inScales 3 outScales 3 inChannels 22 outChannels 6		|
+
+|		inScales 3 outScales 3 inChannels 28 outChannels 6		|
+
+ ********************** Block 3  **********************
+|		inScales 3 outScales 3 inChannels 34 outChannels 6		|
+
+|		inScales 3 outScales 3 inChannels 40 outChannels 6		|
+
+|		inScales 3 outScales 2 inChannels 46 outChannels 6		|
+|		Transition layer inserted! (max), inChannels 52, outChannels 26	|
+
+ ********************** Block 4  **********************
+|		inScales 2 outScales 2 inChannels 26 outChannels 6		|
+
+|		inScales 2 outScales 2 inChannels 32 outChannels 6		|
+
+|		inScales 2 outScales 2 inChannels 38 outChannels 6		|
+
+|		inScales 2 outScales 2 inChannels 44 outChannels 6		|
+
+ ********************** Block 5  **********************
+|		inScales 2 outScales 1 inChannels 50 outChannels 6		|
+|		Transition layer inserted! (max), inChannels 56, outChannels 28	|
+
+|		inScales 1 outScales 1 inChannels 28 outChannels 6		|
+
+|		inScales 1 outScales 1 inChannels 34 outChannels 6		|
+
+|		inScales 1 outScales 1 inChannels 40 outChannels 6		|
+
+|		inScales 1 outScales 1 inChannels 46 outChannels 6		|
+
+---------------------
+FLOPs: 6.85M, Params: 0.29M
+---------------------
+FLOPs: 14.33M, Params: 0.63M
+---------------------
+FLOPs: 27.50M, Params: 0.98M
+---------------------
+FLOPs: 41.67M, Params: 1.45M
+---------------------
+FLOPs: 58.42M, Params: 2.02M
+building network of steps: 
+[1, 2, 3, 4, 5] 15
+ ********************** Block 1  **********************
+|		inScales 3 outScales 3 inChannels 16 outChannels 6		|
+
+ ********************** Block 2  **********************
+|		inScales 3 outScales 3 inChannels 22 outChannels 6		|
+
+|		inScales 3 outScales 3 inChannels 28 outChannels 6		|
+
+ ********************** Block 3  **********************
+|		inScales 3 outScales 3 inChannels 34 outChannels 6		|
+
+|		inScales 3 outScales 3 inChannels 40 outChannels 6		|
+
+|		inScales 3 outScales 2 inChannels 46 outChannels 6		|
+|		Transition layer inserted! (max), inChannels 52, outChannels 26	|
+
+ ********************** Block 4  **********************
+|		inScales 2 outScales 2 inChannels 26 outChannels 6		|
+
+|		inScales 2 outScales 2 inChannels 32 outChannels 6		|
+
+|		inScales 2 outScales 2 inChannels 38 outChannels 6		|
+
+|		inScales 2 outScales 2 inChannels 44 outChannels 6		|
+
+ ********************** Block 5  **********************
+|		inScales 2 outScales 1 inChannels 50 outChannels 6		|
+|		Transition layer inserted! (max), inChannels 56, outChannels 28	|
+
+|		inScales 1 outScales 1 inChannels 28 outChannels 6		|
+
+|		inScales 1 outScales 1 inChannels 34 outChannels 6		|
+
+|		inScales 1 outScales 1 inChannels 40 outChannels 6		|
+
+|		inScales 1 outScales 1 inChannels 46 outChannels 6		|
+
+Files already downloaded and verified
+Files already downloaded and verified
+!!!!!! Load train_set_index !!!!!!
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 256]) accuracy
+torch.Size([1, 200]) accuracy
+torch.Size([1, 200]) accuracy
+torch.Size([1, 200]) accuracy
+torch.Size([1, 200]) accuracy
+torch.Size([1, 200]) accuracy
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 136]) accuracy
+1 1
+torch.Size([1, 136]) accuracy
+1 1
+torch.Size([1, 136]) accuracy
+1 1
+torch.Size([1, 136]) accuracy
+1 1
+torch.Size([1, 136]) accuracy
+1 1
+ exit 0 prec@1 49.920 
+ exit 0 prec@1 conf correct 0.599 prec@1 conf wrong 0.424
+ exit 1 prec@1 51.240 
+ exit 1 prec@1 conf correct 0.618 prec@1 conf wrong 0.438
+ exit 2 prec@1 50.820 
+ exit 2 prec@1 conf correct 0.637 prec@1 conf wrong 0.442
+ exit 3 prec@1 51.620 
+ exit 3 prec@1 conf correct 0.654 prec@1 conf wrong 0.459
+ exit 4 prec@1 51.000 
+ exit 4 prec@1 conf correct 0.668 prec@1 conf wrong 0.466
+[49.91999994506836, 51.239999957275394, 50.81999994506836, 51.61999996337891, 50.99999995727539]
+20 2
+Best var_prec1 50.99999995727539
+Namespace(arch='msdnet', base=1, batch_size=256, bnFactor=[1, 2, 4], bottleneck=True, data='cifar10', data_root='data', decay_rate=0.1, epochs=1, evalmode=None, evaluate_from=None, gpu=None, grFactor=[1, 2, 4], growthRate=6, lr=0.1, lr_type='multistep', momentum=0.9, nBlocks=5, nChannels=16, nScales=3, num_classes=10, optimizer='sgd', print_freq=10, prune='max', reduction=0.5, resume=False, save='.', seed=0, splits=['train', 'val', 'test'], start_epoch=0, step=1, stepmode='lin_grow', use_valid=True, weight_decay=0.0001, workers=16)
+=> saving checkpoint './save_models/checkpoint_000.pth.tar'
+=> saved checkpoint './save_models/checkpoint_000.pth.tar'
+Epoch : 0  of  1 
+
+Best val_prec1: 51.0000 at epoch 0
+********** Final prediction results **********
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 256]) accuracy
+1 1
+torch.Size([1, 16]) accuracy
+1 1
+torch.Size([1, 16]) accuracy
+1 1
+torch.Size([1, 16]) accuracy
+1 1
+torch.Size([1, 16]) accuracy
+1 1
+torch.Size([1, 16]) accuracy
+1 1
+ exit 0 prec@1 52.830 
+ exit 0 prec@1 conf correct 0.640 prec@1 conf wrong 0.455
+ exit 1 prec@1 52.770 
+ exit 1 prec@1 conf correct 0.663 prec@1 conf wrong 0.466
+ exit 2 prec@1 53.640 
+ exit 2 prec@1 conf correct 0.676 prec@1 conf wrong 0.477
+ exit 3 prec@1 54.450 
+ exit 3 prec@1 conf correct 0.693 prec@1 conf wrong 0.493
+ exit 4 prec@1 53.270 
+ exit 4 prec@1 conf correct 0.696 prec@1 conf wrong 0.494
+[52.83, 52.77, 53.64, 54.45, 53.27]
+40 2
+5 conf 0 size
+(5000, 1) prob
+Traceback (most recent call last):
+  File "main.py", line 446, in <module>
+    main()
+  File "main.py", line 147, in main
+    save_final_probabilities(conf)
+  File "main.py", line 318, in save_final_probabilities
+    print(temp2[0].shape,"class")
+AttributeError: 'list' object has no attribute 'shape'
