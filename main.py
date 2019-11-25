@@ -110,7 +110,7 @@ def main():
 
         train_loss, train_prec1, train_prec5, lr = train(train_loader, model, criterion, optimizer, epoch)
 
-        val_loss, valexits_prec1, val_prec1, val_prec5 = validate(val_loader, model, criterion)
+        conf, val_loss, valexits_prec1, val_prec1, val_prec5 = validate(val_loader, model, criterion)
 
         #scores.append(('{}\t{:.3f}' + '\t{:.4f}' * 6)
         #              .format(epoch, lr, train_loss, val_loss,
@@ -142,6 +142,8 @@ def main():
 
     print('********** Final prediction results **********')
     validate(test_loader, model, criterion)
+
+    save_final_probabilities(conf)
 
     return 
 
@@ -187,7 +189,7 @@ def train(train_loader, model, criterion, optimizer, epoch):
             output[exit] = sm(output[exit])
 
         for j in range(len(output)):
-            prec1, prec5, conf_1_c, conf_1_w, conf_1_correct_count = accuracy(output[j].data, target, topk=(1, 5))
+            prec1, prec5, conf_1_c, conf_1_w, conf_1_correct_count, conf_c_batch, conf_w_batch = accuracy(output[j].data, target, topk=(1, 5))
             top1[j].update(prec1.item(), input.size(0))
             top5[j].update(prec5.item(), input.size(0))
 
@@ -218,10 +220,12 @@ def validate(val_loader, model, criterion):
     losses = AverageMeter()
     data_time = AverageMeter()
     top1, top5 = [], []
-    conf_1_c_sum = [0.0] * 5
-    conf_1_w_sum = [0.0] * 5
-    conf_1_c_count = [0] * 5
-    conf_1_w_count = [0] * 5
+    conf_1_c_sum = [0.0] * args.nBlocks
+    conf_1_w_sum = [0.0] * args.nBlocks
+    conf_1_c_count = [0] * args.nBlocks
+    conf_1_w_count = [0] * args.nBlocks
+    conf_1_c_prob = [[] for _ in range(args.nBlocks)]
+    conf_1_w_prob = [[] for _ in range(args.nBlocks)]
 
     for i in range(args.nBlocks):
         top1.append(AverageMeter())
@@ -255,13 +259,15 @@ def validate(val_loader, model, criterion):
 
 
             for j in range(len(output)):
-                prec1, prec5, conf_1_c, conf_1_w, conf_1_correct_count = accuracy(output[j].data, target, topk=(1, 5))
+                prec1, prec5, conf_1_c, conf_1_w, conf_1_correct_count, conf_c_batch, conf_w_batch = accuracy(output[j].data, target, topk=(1, 5))
                 top1[j].update(prec1.item(), input.size(0))
                 top5[j].update(prec5.item(), input.size(0))
                 conf_1_c_sum[j] = (conf_1_c_sum[j] * conf_1_c_count[j] + conf_1_c)/(conf_1_c_count[j] + conf_1_correct_count)
                 conf_1_w_sum[j] = (conf_1_w_sum[j] * conf_1_w_count[j] + conf_1_w)/(conf_1_w_count[j] + 256 - conf_1_correct_count)
                 conf_1_c_count[j] = conf_1_c_count[j] + conf_1_correct_count
-                conf_1_w_count[j] = conf_1_w_count[j] + 256 - conf_1_correct_count 
+                conf_1_w_count[j] = conf_1_w_count[j] + 256 - conf_1_correct_count
+                conf_1_c_prob = conf_1_c_prob + conf_c_batch.tolist()
+                conf_1_w_prob = conf_1_w_prob + conf_w_batch.tolist()
             # measure elapsed time
             batch_time.update(time.time() - end)
             end = time.time()
@@ -283,7 +289,32 @@ def validate(val_loader, model, criterion):
     # print(' * prec@1 {top1.avg:.3f} prec@5 {top5.avg:.3f}'.format(top1=top1[-1], top5=top5[-1]))
     top1_exits = [top1[0].avg,top1[1].avg,top1[2].avg,top1[3].avg,top1[4].avg]
     print(top1_exits)
-    return losses.avg, top1_exits, top1[-1].avg, top5[-1].avg
+    conf = [conf_1_c_prob, conf_1_w_prob]
+    return conf, losses.avg, top1_exits, top1[-1].avg, top5[-1].avg
+
+def save_final_probabilities(conf):
+    result_filename_c = os.path.join(args.save, 'confidence_c.tsv')
+    result_filename_w = os.path.join(args.save, 'confidence_w.tsv')
+
+    confidence_c = ["\tExit\tConfidence\tClass"]
+    confidence_w = ["\tExit\tConfidence\tClass"]
+
+    for exit in range(args.nBlocks):
+        for prob in conf[0][exit]:
+            if prob is not 0.0:
+                confidence_c.append(('\t{:.4f}' * 3).format(exit,prob,10))
+
+    for exit in range(args.nBlocks):
+        for prob in conf[1][exit]:
+            if prob is not 0.0:
+                confidence_w.append(('\t{:.4f}' * 3).format(exit,prob,10))
+
+
+    with open(result_filename_c, 'w') as f:
+        print('\n'.join(confidence_c), file=f)
+
+    with open(result_filename_w, 'w') as f:
+        print('\n'.join(confidence_w), file=f)
 
 def save_checkpoint(state, args, is_best, filename, result):
     print(args)
@@ -361,6 +392,8 @@ def accuracy(output, target, topk=(1,)):
     res.append(conf_1_c)
     res.append(conf_1_w)
     res.append(correct_count)
+    res.append(conf_c[:1].t())
+    res.append(conf_w[:1].t())
     return res
 
 def adjust_learning_rate(optimizer, epoch, args, batch=None,
