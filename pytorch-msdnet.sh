@@ -11,5 +11,5 @@ source $SLURM_TMPDIR/env/bin/activate
 
 pip install --no-index torch torchvision numpy pandas
 
-python3 main.py --data cifar10 --save . --arch msdnet --batch-size 256 --epochs 1 --nBlocks 5 --stepmode lin_grow --step 1 --base 1 --nChannels 16 --use-valid -j 16
+python3 main.py --data cifar10 --save . --arch msdnet --batch-size 256 --epochs 25 --nBlocks 5 --stepmode lin_grow --step 1 --base 1 --nChannels 16 --use-valid -j 16
 

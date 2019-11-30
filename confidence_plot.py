@@ -14,13 +14,15 @@ with open('confidence_c.tsv') as csv_file:
             #print()
             line_count += 1
         else:
-            correct.append([row[1],row[2]])
+            correct.append([row[1],row[2],row[3]])
             line_count += 1
     print(line_count,"lines")
 
 
 correct = pd.DataFrame(data=correct)
+correct = correct.astype(float)
 
+'''
 correct[1] = correct[1].astype(float)
 
 #print(correct[0])
@@ -31,7 +33,7 @@ correct_4 = correct[correct[0]=='3']
 correct_5 = correct[correct[0]=='4']
 
 correct = [correct_1,correct_2,correct_3,correct_4,correct_5]
-
+'''
 
 
 incorrect = []
@@ -44,13 +46,16 @@ with open('confidence_w.tsv') as csv_file:
             #print()
             line_count += 1
         else:
-            incorrect.append([row[1],row[2]])
+            incorrect.append([row[1],row[2],row[3]])
             line_count += 1
     print(line_count,"lines")
 
 
 incorrect = pd.DataFrame(data=incorrect)
+incorrect = incorrect.astype(float)
 
+
+'''
 incorrect[1] = incorrect[1].astype(float)
 
 #print(correct[0])
@@ -63,6 +68,7 @@ incorrect_5 = incorrect[incorrect[0]=='4']
 incorrect = [incorrect_1,incorrect_2,incorrect_3,incorrect_4,incorrect_5]
 
 print("\n")
+'''
 
 def plot():
     for j in range(5):
@@ -76,9 +82,35 @@ def plot():
         fig.savefig("output_"+str(j+1)+".png")
         sns_plot.cla()
 
+
+#Multiclass Exits
+for i in range(5):
+    for j in range(10):
+        cor = correct.loc[(correct[0] == i) & (correct[2] == j),1]
+        #incor = correct.loc[(correct[0] == i) & (correct[2] == j), 1]
+        sns_plot = sns.distplot(cor, color='blue', hist_kws={'edgecolor': 'black'}, label="Correct")
+        #sns_plot = sns.distplot(incor, color='red', hist_kws={'edgecolor': 'black'}, label="Incorrect")
+        sns_plot.set(xlabel='Confidence', ylabel='Frequency', title="Class : " + str(j + 1) + " Exit : " + str(i + 1))
+        fig = sns_plot.get_figure()
+        fig.savefig("output_" + str(i) + str(j) + ".png")
+        sns_plot.cla()
+
+#Multi Exits
+for i in range(5):
+    sns_plot = None
+    cor = correct.loc[(correct[0] == i), 1]
+    incor = incorrect.loc[(incorrect[0] == i), 1]
+    sns_plot = sns.distplot(cor, color='blue', hist_kws={'edgecolor': 'black'}, label="Correct")
+    sns_plot = sns.distplot(incor, color='red', hist_kws={'edgecolor': 'black'}, label="Incorrect")
+    sns_plot.set(xlabel='Confidence', ylabel='Frequency', title=" Exit : " + str(i + 1))
+    fig = sns_plot.get_figure()
+    fig.savefig("output_" + str(i) + ".png")
+    sns_plot.cla()
+
+
 #plot()
 
-
+'''
 print("Exit 1 Correct : ",correct[0].shape[0])
 print("Exit 1 Incorrect : ",incorrect[0].shape[0])
 print("Exit 2 Correct : ",correct[1].shape[0])                                                                                              
@@ -96,3 +128,4 @@ print("Exit 2 Accuracy :", correct[1].shape[0]/(correct[1].shape[0]+incorrect[1]
 print("Exit 3 Accuracy :", correct[2].shape[0]/(correct[2].shape[0]+incorrect[2].shape[0])) 
 print("Exit 4 Accuracy :", correct[3].shape[0]/(correct[3].shape[0]+incorrect[3].shape[0])) 
 print("Exit 5 Accuracy :", correct[4].shape[0]/(correct[4].shape[0]+incorrect[4].shape[0])) 
+'''
