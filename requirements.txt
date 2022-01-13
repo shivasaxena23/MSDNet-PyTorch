@@ -36,7 +36,7 @@ openssl==1.0.2r
 pandas==0.24.2
 patsy==0.5.1
 pcre==8.43
-pillow==5.4.1
+pillow==9.0.0
 pip==19.0.3
 pycparser==2.19
 pyparsing==2.3.1
